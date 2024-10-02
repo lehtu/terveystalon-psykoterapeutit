@@ -39,7 +39,7 @@ function replaceServiceIdsWithNames(specialists, serviceIdToNameMap) {
 function main() {
   // Load specialists and services data
   const specialists = loadJson(specialistsFilePath);
-  const services = loadJson(servicesFilePath);
+  const services = loadJson(servicesFilePath).filter(service => !!service.MasterServices.find(ms => ms.ServiceID === '50fa826b-8e93-4c55-bc2c-988fa3e021cc'));
 
   // Create a map of service IDs to Finnish names
   const serviceIdToNameMap = createServiceIdToNameMap(services);
