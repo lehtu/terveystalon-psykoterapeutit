@@ -2,7 +2,7 @@ const fs = require('fs');
 
 // Path to your specialists JSON file
 const specialistsFilePath = 'specialists_with_service_names.json';
-const outputHtmlPath = 'specialists.html';
+const outputHtmlPath = 'index.html';
 
 // Function to check if a string is a UUID
 function isUUID(str) {
